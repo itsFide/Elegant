@@ -2,7 +2,7 @@
 @import "libs";
 @import "fonts";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap');
-
+@import 'about';
 body{
     font-family: 'Open Sans', sans-serif;
     color:#fff;
@@ -314,9 +314,7 @@ body{
         text-transform: uppercase;
         margin-top: 15px;
     }
-    &-item{
-        width: 32%;
-    }
+    
     &-item-descr{
         margin-top: 25px;
         color: #021725;
