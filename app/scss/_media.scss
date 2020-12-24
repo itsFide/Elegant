@@ -69,11 +69,36 @@
             }
         }
     }
+    .blog{
+        &-content{
+            flex-direction: column;
+        }
+    }
+    .contact{
+        &-item-img img{
+             width: 100%;
+         }
+        &-first-item{
+            flex-direction: column;
+        }
+        &-item-text{
+            width: 100%;
+        }
+        &-second-item{
+            flex-direction: column;
+        }
+        &-item-descr{
+            width: 100%;
+        }
+    }
 }
 @media (max-width:510px){
     .header{
         &-text h3{
             font-size: 42px;
+        }
+        &-logo img{
+            width: 80%;
         }
     }
     .footer{
@@ -109,6 +134,21 @@
         }
         &-title h4{
             font-size: 14px;
+        }
+    }
+    .blog{
+        &-item{
+            width: 100%;
+            padding: 0;
+        }
+        &-mobile__menu__inner a{
+            margin-top: 15px !important;
+            font-size: 14px;
+        }
+    }
+    .sidebar{
+        &-img img{
+            width: 100%;
         }
     }
 }
