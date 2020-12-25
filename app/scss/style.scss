@@ -31,6 +31,8 @@ body{
         align-items: center;
         font-style: italic;
         justify-content: center;
+        
+        
     }
     &-logo{
         cursor: pointer;
@@ -47,6 +49,25 @@ body{
 }
 .blog-header{
     background-image: url('../img/blog/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+.project-header{
+    background-image: url('../img/project/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+}
+.work-header{
+    background-image: url('../img/work-page/bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -171,7 +192,13 @@ body{
 // ------ HEADER ---------
 // ----- ABOUT
 .about{
-    
+    &-inner{
+        transform: scale(0,0);
+        transition: all 1s;
+    }
+    &-inner.active{
+        transform: scale(1,1);
+    }
     &-suptitle{
         margin-top: 150px;
     }
@@ -332,7 +359,13 @@ body{
         text-transform: uppercase;
         margin-top: 15px;
     }
-    
+    &-item{
+        transform: scale(0,0);
+        transition: all 1s;
+        &.active{
+            transform: scale(1,1);
+        }
+    }
     &-item-descr{
         margin-top: 25px;
         color: #021725;
@@ -645,5 +678,65 @@ a.ddott:hover {
 }
 .black-item{
     background-color: #212121;
+}
+// PROJECT
+.project{
+    &-inner{
+        background-color: #f9f9f9;
+        padding: 90px 75px;
+        display: flex;
+    }
+    &-title h4{
+        font-size: 45px;
+        font-weight: 700;
+        color: #1e1e1e;
+    }
+    &-descr{
+        margin-top: 100px;
+        width: 80%;
+    }
+    &-descr p{
+        font-size: 20px;
+        color: #1e1e1e;
+        line-height: 32px;
+        font-weight: 700;
+    }
+    &-item{
+        margin-top: 100px;
+    }
+    &-social{
+        display: flex;
+        justify-content: center;
+    }
+    &-button{
+        margin-left: 135px;
+        margin-bottom: 100px;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    &-btn-item{
+        border: 1px solid #a1a1a1;
+        color: #c0c0c0;
+        padding: 25px 100px
+    }
+}
+// WORK
+.work{
+    &-descr{
+        margin-top: 50px;    
+    }
+    &-item-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        
+    }
+    &-item{
+        width: 25%;
+        & img{
+            width: 100%;
+        }
+    }
 }
 @import "media";
